@@ -1,0 +1,23 @@
+import { useState } from "react";
+import './App.css';
+
+function App() {
+
+  const [newTaskName, setNewTaskName] = useState();
+
+  return (
+    <div className="App">
+
+      <input
+        type="text"
+        placeholder="Ingrese una nueva tarea"
+        onChange={(e) => setNewTaskName(e.target.value)} />
+
+
+      <button onClick={() => alert(newTaskName)}>Guardar tarea</button>
+
+    </div>
+  );
+}
+
+export default App;
